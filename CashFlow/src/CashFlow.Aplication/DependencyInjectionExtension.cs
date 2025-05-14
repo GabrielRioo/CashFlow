@@ -4,6 +4,7 @@ using CashFlow.Aplication.UseCases.Expenses.GetAll;
 using CashFlow.Aplication.UseCases.Expenses.GetById;
 using CashFlow.Aplication.UseCases.Expenses.Register;
 using CashFlow.Aplication.UseCases.Expenses.Update;
+using CashFlow.Aplication.UseCases.Reports.Excel;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace CashFlow.Aplication;
@@ -28,5 +29,6 @@ public static class DependencyInjectionExtension
         services.AddScoped<IGetExpenseByIdUseCase, GetExpenseByIdUseCase>();
         services.AddScoped<IDeleteExpenseUseCase, DeleteExpenseUseCase>();
         services.AddScoped<IUpdateExpenseUseCase, UpdateExpenseUseCase>();
+        services.AddScoped<IGenerateExpensesReportExcelUseCase, GenerateExpensesReportExcelUseCase>();
     }
 }
